@@ -1,10 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
    
-    document.getElementById('searchInputTable').addEventListener('input', searchTable);
-  
-    function searchTable() {
+    document.getElementById('searchButton').addEventListener('click', function() {
+      var searchText = document.getElementById('searchInputTable').value.toLowerCase();
+      searchTable(searchText);
+    });
+            
+    function searchTable(searchText) {
       
-      var searchText = this.value.toLowerCase();
+      // var searchText = this.value.toLowerCase();
       console.log(searchText);
   
       var rows = document.querySelectorAll('#tabledata tbody tr');
